@@ -246,3 +246,19 @@ main {
         justify-content: center;
     }
 }
+
+/* Stylt die Scrollleiste in deinem dunklen Design */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #121212; 
+}
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
