@@ -2,21 +2,21 @@ const myMovies = [
     {
         title: "The Life of a Chair",
         year: "2026",
-        genre: "Drama / Experimental",
+        genre: "Experimental",
         status: "released",
         info: "More than just wood. No music, no dialogue—just a chair and nature.",
         posterUrl: "the-life-of-a-chair.jpg",
         youtubeUrl: "https://www.youtube.com/watch?v=oc_jo4OjmtA",
         trailerUrl: "https://www.youtube.com/watch?v=4YybBfvTX3M",
-        letterboxdUrl: "https://letterboxd.com",
-        tmdbUrl: "https://themoviedb.org"
+        letterboxdUrl: "https://letterboxd.com/film/the-life-of-a-chair/",
+        tmdbUrl: "https://www.themoviedb.org/movie/1658367-the-life-of-a-chair/"
     },
     {
         title: "Untitled Second Film",
         year: "TBA",
         genre: "Project In Progress",
         status: "upcoming",
-        info: "Currently in development. Stay tuned for updates on my next film project.",
+        info: "Currently in development...",
         posterUrl: "",
         youtubeUrl: "",
         trailerUrl: "",
