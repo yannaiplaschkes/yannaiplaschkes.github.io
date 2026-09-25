@@ -13,7 +13,7 @@ const myMovies = [
     },
     {
         title: "Untitled Second Film",
-        year: "TBA",
+        year: "2026",
         genre: "Project In Progress",
         status: "upcoming",
         info: "Currently in development...",
