@@ -252,3 +252,12 @@ main {
   background: #555; 
 }
 
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: fadeInPage 1.0s ease-out forwards;
+}
+
