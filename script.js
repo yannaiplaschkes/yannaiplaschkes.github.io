@@ -1,31 +1,3 @@
-const myMovies = [
-    {
-        title: "The Life of a Chair",
-        year: "2026",
-        genre: "Experimental",
-        runtime: "8 min",
-        status: "released",
-        info: "More than just wood. No music, no dialogue—just a chair and nature.",
-        posterUrl: "the-life-of-a-chair.jpg",
-        youtubeUrl: "https://www.youtube.com/watch?v=oc_jo4OjmtA",
-        trailerUrl: "https://www.youtube.com/watch?v=4YybBfvTX3M",
-        letterboxdUrl: "https://letterboxd.com/film/the-life-of-a-chair/",
-        tmdbUrl: "https://www.themoviedb.org/movie/1658367-the-life-of-a-chair/"
-    },
-    {
-        title: "Untitled Second Film",
-        year: "2026",
-        genre: "Project In Progress",
-        status: "upcoming",
-        info: "Currently in development...",
-        posterUrl: "",
-        youtubeUrl: "",
-        trailerUrl: "",
-        letterboxdUrl: "",
-        tmdbUrl: ""
-    }
-];
-
 const movieGrid = document.getElementById("movie-grid");
 
 function displayMovies() {
@@ -46,6 +18,7 @@ function displayMovies() {
             `;
         } else {
             card.className = "movie-card";
+            card.style.cursor = "pointer";
             card.innerHTML = `
                 <div class="card-content">
                     <img src="${movie.posterUrl}" alt="${movie.title} Poster" class="movie-poster">
@@ -64,6 +37,11 @@ function displayMovies() {
                     </div>
                 </div>
             `;
+
+            card.addEventListener("click", (e) => {
+                if (e.target.closest("a")) return; 
+                window.location.href = `movie.html?movie=${movie.slug}`;
+            });
         }
         movieGrid.appendChild(card);
     });
