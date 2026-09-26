@@ -29,6 +29,7 @@ function displayMovies() {
                         <div class="movie-links">
                             <a href="${movie.youtubeUrl}" target="_blank" class="movie-btn btn-watch">Watch Full Film</a>
                             <a href="${movie.trailerUrl}" target="_blank" class="movie-btn btn-trailer">Watch Trailer</a>
+                            <a href="movie.html?movie=${movie.slug}" class="movie-btn btn-trailer">Read More</a>
                         </div>
                         <div class="database-links">
                             <a href="${movie.letterboxdUrl}" target="_blank" class="db-link">Letterboxd</a>
