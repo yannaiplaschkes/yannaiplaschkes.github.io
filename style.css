@@ -261,6 +261,8 @@ body {
   animation: fadeInPage 1.0s ease-out forwards;
 }
 
+/* --- FIX FÜR DEN FOOTER GANZ UNTEN --- */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -270,19 +272,25 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Nutzt die volle Bildschirmhöhe */
+    padding: 60px 20px 0 20px; /* Entfernt das untere Padding, damit der Footer ganz unten sitzen kann */
 }
 
 main {
-    flex: 1;
+    flex: 1 0 auto; /* Drückt den Footer aktiv nach unten */
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto; /* Zentriert den Hauptinhalt sauber */
 }
 
 footer {
+    flex-shrink: 0; /* Verhindert, dass der Footer gestaucht wird */
+    width: 100%;
     text-align: center;
-    padding: 30px 0;
+    padding: 60px 0 30px 0; /* Gibt dem Footer Luft zu den Projekten darüber */
     font-size: 0.8rem;
-    color: #444; 
-    border-top: 1px solid #111;
-    background-color: transparent; 
+    color: #444444; 
+    border-top: 1px solid #1a1a1a; /* Eine dezente Trennlinie über dem Footer */
 }
 
 
