@@ -10,9 +10,9 @@ const myMovies = [
         description: "longer strory coming soon...",
         posterUrl: "the-life-of-a-chair.jpg",
         galleryPhotos: [
-            "chairscreensot1.png",
-            "chairscreensot2.png",
-            "chairscreensot3.png"
+            "chairscreenshot1.png",
+            "chairscreenshot2.png",
+            "chairscreenshot3.png"
         ],
         behindTheScenes: [
             "bts/chair-bts-1.jpg",
