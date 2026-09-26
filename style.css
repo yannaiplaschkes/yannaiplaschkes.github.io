@@ -107,8 +107,8 @@ main {
     border-radius: 8px;
     border: 1px solid #222222;
     box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-    display: block; /* Stellt sicher, dass das Bild als Block-Element gerendert wird */
-    background-color: #1a1a1a; /* fallback background while image loads / if it fails */
+    display: block; 
+    background-color: #1a1a1a; 
 }
 
 .movie-details {
@@ -290,4 +290,38 @@ footer {
     color: #444444; 
 }
 
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #666666;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+    .back-link:hover {
+        color: #ffffff;
+    }
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #1c1c1c;
+}
+
+.movie-description {
+    color: #b3b3b3;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 50px;
+    white-space: pre-line;
+}
 
