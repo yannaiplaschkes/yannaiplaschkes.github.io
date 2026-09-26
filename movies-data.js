@@ -18,6 +18,7 @@ const myMovies = [
             "chairbehindts1.jpg",
             "chairbehindts2.jpg"
         ],
+        description 2: "longer story coming soon..."
         youtubeUrl: "https://www.youtube.com/watch?v=oc_jo4OjmtA",
         trailerUrl: "https://www.youtube.com/watch?v=4YybBfvTX3M",
         letterboxdUrl: "https://letterboxd.com/film/the-life-of-a-chair/",
