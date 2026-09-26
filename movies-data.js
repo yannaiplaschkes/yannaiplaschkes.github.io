@@ -15,8 +15,8 @@ const myMovies = [
             "chairscreenshot3.png"
         ],
         behindTheScenes: [
-            "bts/chair-bts-1.jpg",
-            "bts/chair-bts-2.jpg"
+            "bts/chairbehindts1.jpg",
+            "bts/chairbehindts2.jpg"
         ],
         youtubeUrl: "https://www.youtube.com/watch?v=oc_jo4OjmtA",
         trailerUrl: "https://www.youtube.com/watch?v=4YybBfvTX3M",
