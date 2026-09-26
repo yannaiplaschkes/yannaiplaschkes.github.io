@@ -24,6 +24,16 @@ if (movie) {
         img.alt = `${movie.title} behind the scenes`;
         bts.appendChild(img);
     });
+
+    document.getElementById("movie-links").innerHTML = `
+        <a href="${movie.youtubeUrl}" target="_blank" class="movie-btn btn-watch">Watch Full Film</a>
+        <a href="${movie.trailerUrl}" target="_blank" class="movie-btn btn-trailer">Watch Trailer</a>
+    `;
+
+    document.getElementById("database-links").innerHTML = `
+        <a href="${movie.letterboxdUrl}" target="_blank" class="db-link">Letterboxd</a>
+        <a href="${movie.tmdbUrl}" target="_blank" class="db-link">TMDB</a>
+    `;
 } else {
     document.getElementById("movie-title").textContent = "Film not found";
 }
