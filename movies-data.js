@@ -7,10 +7,10 @@ const myMovies = [
         runtime: "12 min",
         status: "released",
         info: "More than just wood. No music, no dialogue—just a chair and nature.",
-        description: "Write your longer story about the film here. You can write multiple paragraphs — just leave a blank line between them.",
+        description: "longer strory coming soon...",
         posterUrl: "the-life-of-a-chair.jpg",
         galleryPhotos: [
-            "photos/chair-1.jpg",
+            "chairscreensot1.jpg",
             "photos/chair-2.jpg",
             "photos/chair-3.jpg"
         ],
