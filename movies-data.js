@@ -4,7 +4,7 @@ const myMovies = [
         slug: "the-life-of-a-chair",
         year: "2026",
         genre: "Experimental",
-        runtime: "12 min",
+        runtime: "8 min",
         status: "released",
         info: "More than just wood. No music, no dialogue just a chair and nature.",
         description: "I realised this film on the 26. march 2026, after just 2 days of filming. its my first film. i used my phone because at the time i didnt have a camera. it is a chair that lives alone in a town. no other chairs or humans. ",
