@@ -25,7 +25,7 @@ if (movie) {
         bts.appendChild(img);
     });
 
-      document.getElementById("movie-closing-text").textContent = movie.closingNote;
+    document.getElementById("movie-closing-text").textContent = movie.closingNote;
 
     document.getElementById("movie-links").innerHTML = `
         <a href="${movie.youtubeUrl}" target="_blank" class="movie-btn btn-watch">Watch Full Film</a>
