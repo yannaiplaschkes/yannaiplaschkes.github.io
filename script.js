@@ -51,7 +51,7 @@ function displayMovies() {
                     <img src="${movie.posterUrl}" alt="${movie.title} Poster" class="movie-poster">
                     <div class="movie-details">
                         <h3>${movie.title}</h3>
-                        <div class="movie-meta">${movie.year} • ${movie.genre}</div>
+                        <div class="movie-meta">${movie.year} • ${movie.genre} • ${movie.runtime}</div>
                         <p class="movie-info">${movie.info}</p>
                         <div class="movie-links">
                             <a href="${movie.youtubeUrl}" target="_blank" class="movie-btn btn-watch">Watch Full Film</a>
