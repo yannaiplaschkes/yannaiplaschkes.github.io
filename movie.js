@@ -39,3 +39,16 @@ if (movie) {
 } else {
     document.getElementById("movie-title").textContent = "Film not found";
 }
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG" && e.target.closest(".photo-gallery")) {
+        lightbox.classList.add("active");
+        lightboxImg.src = e.target.src;
+    }
+});
+
+lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+});
