@@ -325,9 +325,15 @@ footer {
     white-space: pre-line;
 }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yannai Plaschkes | Filmmaker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+.movie-card:not(.upcoming-card) .movie-details h3,
+.movie-card:not(.upcoming-card) .movie-poster {
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.movie-card:not(.upcoming-card):hover .movie-details h3 {
+    color: #cccccc;
+}
+
+.movie-card:not(.upcoming-card):hover .movie-poster {
+    opacity: 0.85;
+}
