@@ -3,6 +3,7 @@ const myMovies = [
         title: "The Life of a Chair",
         year: "2026",
         genre: "Experimental",
+        runtime: "8 min",
         status: "released",
         info: "More than just wood. No music, no dialogue—just a chair and nature.",
         posterUrl: "the-life-of-a-chair.jpg",
