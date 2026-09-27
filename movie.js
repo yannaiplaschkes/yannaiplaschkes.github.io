@@ -41,14 +41,58 @@ if (movie) {
 }
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
+let currentGalleryImages = [];
+let currentIndex = 0;
+
+function openLightbox(imagesList, index) {
+    currentGalleryImages = imagesList;
+    currentIndex = index;
+    lightboxImg.src = currentGalleryImages[currentIndex];
+    lightbox.classList.add("active");
+}
+
+function showNext() {
+    currentIndex = (currentIndex + 1) % currentGalleryImages.length;
+    lightboxImg.src = currentGalleryImages[currentIndex];
+}
+
+function showPrev() {
+    currentIndex = (currentIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+    lightboxImg.src = currentGalleryImages[currentIndex];
+}
 
 document.addEventListener("click", (e) => {
-    if (e.target.tagName === "IMG" && e.target.closest(".photo-gallery")) {
-        lightbox.classList.add("active");
-        lightboxImg.src = e.target.src;
+    const galleryEl = e.target.closest(".photo-gallery");
+    if (e.target.tagName === "IMG" && galleryEl) {
+        const imagesInThisGallery = Array.from(galleryEl.querySelectorAll("img")).map(img => img.src);
+        const clickedIndex = imagesInThisGallery.indexOf(e.target.src);
+        openLightbox(imagesInThisGallery, clickedIndex);
     }
 });
 
-lightbox.addEventListener("click", () => {
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.classList.remove("active");
+    }
+});
+
+document.querySelector(".lightbox-close").addEventListener("click", () => {
     lightbox.classList.remove("active");
+});
+
+document.querySelector(".lightbox-next").addEventListener("click", (e) => {
+    e.stopPropagation();
+    showNext();
+});
+
+document.querySelector(".lightbox-prev").addEventListener("click", (e) => {
+    e.stopPropagation();
+    showPrev();
+});
+
+document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("active")) return;
+    if (e.key === "Escape") lightbox.classList.remove("active");
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
 });
