@@ -10,7 +10,7 @@ const myMovies = [
         description: "I realised this film on the 26. march 2026, after just 2 days of filming. its my first film. i used my phone because at the time i didnt have a camera. it is a chair that lives alone in a town. no other chairs or humans. ",
         posterUrl: "the-life-of-a-chair.jpg",
         galleryPhotos: [
-            "chairscreenshot1.png",
+            "chairscreenshot1.jpg",
             "chairscreenshot2.png",
             "chairscreenshot3.png"
         ],
