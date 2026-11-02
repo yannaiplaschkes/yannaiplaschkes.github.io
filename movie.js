@@ -25,6 +25,34 @@ if (movie) {
         bts.appendChild(img);
     });
 
+        const reviews = movie.reviews || [];
+    if (reviews.length > 0) {
+        document.getElementById("reviews-section").style.display = "block";
+        const list = document.getElementById("reviews-list");
+
+        reviews.forEach(r => {
+            const full = Math.floor(r.stars);
+            const half = r.stars % 1 >= 0.5 ? "½" : "";
+            const starText = "★".repeat(full) + half;
+
+            const card = document.createElement("a");
+            card.href = r.url;
+            card.target = "_blank";
+            card.rel = "noopener";
+            card.className = "review-card";
+            card.innerHTML = `
+                <div class="review-head">
+                    <span class="review-avatar">${r.user.charAt(0).toUpperCase()}</span>
+                    <span class="review-user">${r.user}</span>
+                    <span class="review-stars">${starText}</span>
+                </div>
+                <p class="review-text">${r.text}</p>
+                <span class="review-source">View on Letterboxd →</span>
+            `;
+            list.appendChild(card);
+        });
+    }
+
     document.getElementById("movie-closing-text").textContent = movie.closingNote;
 
     document.getElementById("movie-links").innerHTML = `
