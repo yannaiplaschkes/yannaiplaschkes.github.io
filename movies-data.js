@@ -21,16 +21,16 @@ const myMovies = [
         closingNote: "longer story coming soon...",
         reviews: [
             {
-                user: "username1",
-                stars: 4.5,
-                text: "Short positive review text goes here.",
-                url: "https://letterboxd.com/username1/film/the-life-of-a-chair/"
+                user: "Capybara",
+                stars: 4,
+                text: "This is pretty cool for a first film, I hope the director continues",
+                url: "https://boxd.it/ej8ETf"
             },
             {
-                user: "username2",
-                stars: 5,
-                text: "Another review here.",
-                url: "https://letterboxd.com/username2/film/the-life-of-a-chair/"
+                user: "Alysson Oliveira",
+                stars: 3.5,
+                text: "The life of the objects, and the objects in life. Interesting idea about how things see the world. ",
+                url: "https://boxd.it/f3Rz1h"
             }
         ],
         youtubeUrl: "https://www.youtube.com/watch?v=oc_jo4OjmtA",
