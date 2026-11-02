@@ -19,6 +19,20 @@ const myMovies = [
             "chairbehindts2.jpg"
         ],
         closingNote: "longer story coming soon...",
+        reviews: [
+            {
+                user: "username1",
+                stars: 4.5,
+                text: "Short positive review text goes here.",
+                url: "https://letterboxd.com/username1/film/the-life-of-a-chair/"
+            },
+            {
+                user: "username2",
+                stars: 5,
+                text: "Another review here.",
+                url: "https://letterboxd.com/username2/film/the-life-of-a-chair/"
+            }
+        ],
         youtubeUrl: "https://www.youtube.com/watch?v=oc_jo4OjmtA",
         trailerUrl: "https://www.youtube.com/watch?v=4YybBfvTX3M",
         letterboxdUrl: "https://letterboxd.com/film/the-life-of-a-chair/",
