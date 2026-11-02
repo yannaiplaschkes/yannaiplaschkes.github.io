@@ -29,8 +29,14 @@ const myMovies = [
             {
                 user: "Alysson Oliveira",
                 stars: 3.5,
-                text: "The life of the objects, and the objects in life. Interesting idea about how things see the world. ",
+                text: "The life of the objects, and the objects in life. Interesting idea about how things see the world.",
                 url: "https://boxd.it/f3Rz1h"
+            },
+            {
+                user: "piper",
+                stars: 4,
+                text: "a chair is a stable, reliable thing but the chair becomes overwhelmed by the task of change and growth, losing himself in the process",
+                url: "https://boxd.it/gzQQ9h"
             }
         ],
         youtubeUrl: "https://www.youtube.com/watch?v=oc_jo4OjmtA",
