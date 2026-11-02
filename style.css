@@ -253,8 +253,8 @@ main {
 }
 
 @keyframes fadeInPage {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 body {
@@ -514,4 +514,8 @@ body::after {
 
 .review-card:hover .review-source {
     color: #00e054;
+}
+
+html {
+    overflow-x: hidden;
 }
