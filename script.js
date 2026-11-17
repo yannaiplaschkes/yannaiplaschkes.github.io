@@ -1,11 +1,31 @@
 const movieGrid = document.getElementById("movie-grid");
 
+function buildWatchButtons(movie) {
+    const watch = movie.youtubeUrl
+        ? `<a href="${movie.youtubeUrl}" target="_blank" class="movie-btn btn-watch">Watch Full Film</a>`
+        : `<span class="movie-btn btn-disabled">Coming to YouTube soon</span>`;
+    const trailer = movie.trailerUrl
+        ? `<a href="${movie.trailerUrl}" target="_blank" class="movie-btn btn-trailer">Watch Trailer</a>`
+        : "";
+    return watch + trailer;
+}
+
+function buildDbLinks(movie) {
+    const lb = movie.letterboxdUrl
+        ? `<a href="${movie.letterboxdUrl}" target="_blank" class="db-link">Letterboxd</a>`
+        : "";
+    const tmdb = movie.tmdbUrl
+        ? `<a href="${movie.tmdbUrl}" target="_blank" class="db-link">TMDB</a>`
+        : "";
+    return lb + tmdb;
+}
+
 function displayMovies() {
     movieGrid.innerHTML = "";
-    
+
     myMovies.forEach(movie => {
         const card = document.createElement("div");
-        
+
         if (movie.status === "upcoming") {
             card.className = "movie-card upcoming-card";
             card.innerHTML = `
@@ -27,20 +47,18 @@ function displayMovies() {
                         <div class="movie-meta">${movie.year} • ${movie.genre} • ${movie.runtime}</div>
                         <p class="movie-info">${movie.info}</p>
                         <div class="movie-links">
-                            <a href="${movie.youtubeUrl}" target="_blank" class="movie-btn btn-watch">Watch Full Film</a>
-                            <a href="${movie.trailerUrl}" target="_blank" class="movie-btn btn-trailer">Watch Trailer</a>
+                            ${buildWatchButtons(movie)}
                             <a href="movie.html?movie=${movie.slug}" class="movie-btn btn-trailer">Read More...</a>
                         </div>
                         <div class="database-links">
-                            <a href="${movie.letterboxdUrl}" target="_blank" class="db-link">Letterboxd</a>
-                            <a href="${movie.tmdbUrl}" target="_blank" class="db-link">TMDB</a>
+                            ${buildDbLinks(movie)}
                         </div>
                     </div>
                 </div>
             `;
 
             card.addEventListener("click", (e) => {
-                if (e.target.closest("a")) return; 
+                if (e.target.closest("a")) return;
                 window.location.href = `movie.html?movie=${movie.slug}`;
             });
         }
