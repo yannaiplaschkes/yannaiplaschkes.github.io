@@ -14,6 +14,7 @@ if (movie) {
         const img = document.createElement("img");
         img.src = src;
         img.alt = movie.title;
+        img.loading = "lazy";
         gallery.appendChild(img);
     });
 
@@ -22,10 +23,13 @@ if (movie) {
         const img = document.createElement("img");
         img.src = src;
         img.alt = `${movie.title} behind the scenes`;
+        img.loading = "lazy";
         bts.appendChild(img);
     });
 
-        const reviews = movie.reviews || [];
+    document.getElementById("movie-closing-text").textContent = movie.closingNote;
+
+    const reviews = movie.reviews || [];
     if (reviews.length > 0) {
         document.getElementById("reviews-section").style.display = "block";
         const list = document.getElementById("reviews-list");
@@ -53,20 +57,25 @@ if (movie) {
         });
     }
 
-    document.getElementById("movie-closing-text").textContent = movie.closingNote;
+    const watch = movie.youtubeUrl
+        ? `<a href="${movie.youtubeUrl}" target="_blank" class="movie-btn btn-watch">Watch Full Film</a>`
+        : `<span class="movie-btn btn-disabled">Coming to YouTube soon</span>`;
+    const trailer = movie.trailerUrl
+        ? `<a href="${movie.trailerUrl}" target="_blank" class="movie-btn btn-trailer">Watch Trailer</a>`
+        : "";
+    document.getElementById("movie-links").innerHTML = watch + trailer;
 
-    document.getElementById("movie-links").innerHTML = `
-        <a href="${movie.youtubeUrl}" target="_blank" class="movie-btn btn-watch">Watch Full Film</a>
-        <a href="${movie.trailerUrl}" target="_blank" class="movie-btn btn-trailer">Watch Trailer</a>
-    `;
-
-    document.getElementById("database-links").innerHTML = `
-        <a href="${movie.letterboxdUrl}" target="_blank" class="db-link">Letterboxd</a>
-        <a href="${movie.tmdbUrl}" target="_blank" class="db-link">TMDB</a>
-    `;
+    const lb = movie.letterboxdUrl
+        ? `<a href="${movie.letterboxdUrl}" target="_blank" class="db-link">Letterboxd</a>`
+        : "";
+    const tmdb = movie.tmdbUrl
+        ? `<a href="${movie.tmdbUrl}" target="_blank" class="db-link">TMDB</a>`
+        : "";
+    document.getElementById("database-links").innerHTML = lb + tmdb;
 } else {
     document.getElementById("movie-title").textContent = "Film not found";
 }
+
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 let currentGalleryImages = [];
