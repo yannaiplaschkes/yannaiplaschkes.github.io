@@ -45,21 +45,29 @@ const myMovies = [
         tmdbUrl: "https://www.themoviedb.org/movie/1658367-the-life-of-a-chair/"
     },
     {
-        title: "Untitled Second Film",
-        slug: "untitled-second-film",
+        title: "Chair, Chair",
+        slug: "chair-chair",
         year: "2026",
-        genre: "Project In Progress",
-        runtime: "",
-        status: "upcoming",
-        info: "Currently in development...",
-        description: "",
-        closingNote: "",
-        posterUrl: "",
-        galleryPhotos: [],
-        behindTheScenes: [],
+        genre: "Drama",
+        runtime: "9 min",
+        status: "released",
+        info: "Two chairs run away from society and decide to live in natur...",
+        description: "longer story coming soon...",
+        posterUrl: "chair, chair.jpg",
+        galleryPhotos: [
+            "[still1.jpg]",
+            "[still2.jpg]",
+            "[still3.jpg]"
+        ],
+        behindTheScenes: [
+            "[bts1.jpg]",
+            "[bts2.jpg]"
+        ],
+        closingNote: "longer story coming soon...",
+        reviews: [],
         youtubeUrl: "",
         trailerUrl: "",
-        letterboxdUrl: "",
-        tmdbUrl: ""
+        letterboxdUrl: "https://letterboxd.com/film/chair-chair/",
+        tmdbUrl: "https://www.themoviedb.org/movie/1827582-chair-chair"
     }
 ];
