@@ -66,7 +66,7 @@ const myMovies = [
         closingNote: "longer story coming soon...",
         reviews: [],
         youtubeUrl: "",
-        trailerUrl: "",
+        trailerUrl: "https://www.youtube.com/watch?v=4sXU7nCGdpM",
         letterboxdUrl: "https://letterboxd.com/film/chair-chair/",
         tmdbUrl: "https://www.themoviedb.org/movie/1827582-chair-chair"
     }
