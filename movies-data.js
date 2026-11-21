@@ -51,23 +51,35 @@ const myMovies = [
         genre: "Drama",
         runtime: "9 min",
         status: "released",
-        info: "Two chairs run away from society and decide to live in natur...",
+        info: "Two chairs run away from society and decide to live in nature.",
         description: "longer story coming soon...",
         posterUrl: "chair, chair.jpg",
-        galleryPhotos: [
-            "[still1.jpg]",
-            "[still2.jpg]",
-            "[still3.jpg]"
-        ],
-        behindTheScenes: [
-            "[bts1.jpg]",
-            "[bts2.jpg]"
-        ],
+        galleryPhotos: [],
+        behindTheScenes: [],
         closingNote: "longer story coming soon...",
         reviews: [],
         youtubeUrl: "https://youtu.be/_byLffcYIP8?is=G0CUIq2FJyxgvQp5",
         trailerUrl: "https://www.youtube.com/watch?v=4sXU7nCGdpM",
         letterboxdUrl: "https://letterboxd.com/film/chair-chair/",
         tmdbUrl: "https://www.themoviedb.org/movie/1827582-chair-chair"
+    },
+    {
+        title: "Untitled Third Film",
+        slug: "untitled-third-film",
+        year: "2026",
+        genre: "Project In Progress",
+        runtime: "",
+        status: "upcoming",
+        info: "Currently in development...",
+        description: "",
+        closingNote: "",
+        reviews: [],
+        posterUrl: "",
+        galleryPhotos: [],
+        behindTheScenes: [],
+        youtubeUrl: "",
+        trailerUrl: "",
+        letterboxdUrl: "",
+        tmdbUrl: ""
     }
 ];
